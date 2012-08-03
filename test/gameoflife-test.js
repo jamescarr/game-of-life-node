@@ -108,23 +108,31 @@ describe('Game Of Life', function(){
 				grid.forEach(function(row){
 					row.forEach(function(cell){
 						if(cell == 1){
-							output += 'x'
+							output += 'x';
 						}else{
-							output += '.'
+							output += '.';
 						}
 					});
 					output += '\n';
 				});
 			}
-		}, output = '';
-		it('should render as string', function(){
-			var game = gol.createGame([
+		};
+    var game = {}, output = '';
+    
+    beforeEach(function(){
+			game = gol.createGame([
 				[0,1,0,0],
 				[1,0,1,0],
 				[0,0,0,0],
 			], stringRenderer);
-			
-			game.cycle()
+    });
+		it('should render initial grid', function(){
+			output.should.eql('.x..\nx.x.\n....\n');
+		});
+		it('should render grid after cycle', function(){
+      output = '';
+
+      game.cycle();
 
 			output.should.eql('.x..\n.x..\n....\n');
 		});

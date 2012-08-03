@@ -10,10 +10,13 @@
   "author": "James R. Carr",
   "license": "BSD",
   "dependencies":{
-    "charm":"*"
+    "charm":"0.1.0"
   },
   "devDependencies":{
-    "should":"*",
-    "mocha":"*"
+    "should":"1.1.0",
+    "mocha":"1.3.2"
+  },
+  "scripts":{
+    "test":"./node_modules/mocha/bin/mocha -R spec -G"
   }  
 }
