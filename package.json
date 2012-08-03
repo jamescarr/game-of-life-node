@@ -1,0 +1,19 @@
+{
+  "name": "game-of-life",
+  "version": "0.0.0",
+  "description": "Game of Life Kata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "James R. Carr",
+  "license": "BSD",
+  "dependencies":{
+    "charm":"*"
+  },
+  "devDependencies":{
+    "should":"*",
+    "mocha":"*"
+  }  
+}
